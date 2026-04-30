@@ -1,0 +1,52 @@
+#string to integer
+def string_to_int(s):
+    result = 0
+    for char in s:
+        # Subtract ASCII of '0' (48) from the current char's ASCII
+        digit = ord(char) - ord('0')
+        # Shift existing result one decimal place left and add new digit
+        result = result * 10 + digit
+    return result
+print(string_to_int("123"))  # Output: 123
+#list//mutable
+a=[12,13,4,8.7]
+b=sorted(a)
+print(b)
+a=[1,2,3]
+b=[3,4,5]
+print(a+b)
+#print alphabets
+a=[chr(i) for i in range(65,91)]
+print(a)
+#print consonant
+a=[chr(i) for i in range(65,91) if chr(i) not in 'AEIOU']
+print(a)
+#find largest digit number using list
+#int->str?-yes
+#int->list?-no
+a=6789
+b=[int(i) for i in str(a)]
+print(max(b))
+
+#printing the details only if specify the condition
+names=["Ram","Raj","Rose","Jack","Pavi"]
+marks=[45,33,90,27,78]
+pos=1
+for i in range(5):
+    if marks[i]>40:
+        print("{}.{} has scored {}%".format(pos,names[i],marks[i]))
+        pos+=1   
+#Assign grade based on marks
+names=["raM","RAJ","rose","JaCk","PaVi"]
+marks=[[30,40,50],[66,77,55],[33,78,90],[87,97,57],[47,88,44]]
+for i in range(5):
+    g=sum(marks[i])//3
+    if g>80:
+       grade="S"
+    elif g<40:
+        grade="F"
+    elif g>=40 and g<=60:
+        grade="B"
+    else:
+        grade="A"
+    print("{}.Mr/Ms {} has scored {}% - {} Grade".format(i+1,names[i].title(),g,grade))        
