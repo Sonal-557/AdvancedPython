@@ -47,3 +47,37 @@ class Solution:
             c+=nums[i]
             li.append(c)
         return li    
+
+#tuples
+a=()
+a=a+(10,)
+print(a)
+#dictnioary
+a={}
+print(type(a))
+#set
+a=set()
+print(type(a))
+d={'name':'sonal','age':30,'runs':3400}
+for i in d.items():
+    print(i)
+for i in d.keys():
+    print(i)
+d['marks']=[2,3,4,5]
+print(d['marks'][1])
+#check whether number is round or not
+a=int(input("Enter any number"))
+nums=[]
+while(True):
+    if a==1:
+        break
+    elif a in nums:
+        break
+    else:
+       nums.append(a)
+       d=sum([int(i)*int(i) for i in str(a)])
+       nums.append(d)
+if a==1:
+    print("Round")
+else:
+    print("No")
