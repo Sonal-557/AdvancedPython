@@ -1,0 +1,92 @@
+a=1
+for i in range(2,5):
+    a=a+i
+    for j in range(i):
+        a=a+j
+        print(str(a),end=" ")
+    print()
+print(a)    
+
+#Functions
+def a1():
+    print(20+40)
+def a2(a,b):
+    print(20+40)
+def a3():
+    a=90
+    b=11
+    return a+b
+def a4(a,b):
+    return a+b
+a1()
+a2(10,20)
+res=a1()
+res1=a4(90,60)  
+
+def square():
+    side=int(input("Enter side:"))
+    print("Area: ",side*side)
+def rectangle(l,b):
+    print("Area:",l*b)
+def circle():
+    r=int(input("Enter radius:"))
+    return 3.14*r*r
+def triangle(b,h):
+    return 0.5*b*h
+while True:
+    print("1.Square\n2.Rectangle\n3.Circle\n4.Triangle\n5.Exit")
+    ch=int(input("Enter your choice:"))
+    if ch==1:
+        square()
+    elif ch==2:
+        l=int(input("Enter length:"))
+        b=int(input("Enter breadth:"))
+        rectangle(l,b)
+    elif ch==3:
+        x=circle()
+        print("Area:",x)
+    elif ch==4:
+        b=int(input("Enter breadth:"))
+        h=int(input("Enter height:"))
+        y=triangle(b,h)
+        print("Area: ",y)
+    else:
+        break
+
+#check prime,sum of digit prime, every digit prime      
+def prime(n):
+    if n<=1:
+        return False
+    else:    
+       for i in range(2,n):
+          if n%i==0:
+             return False
+       return True
+def sod(n):
+    digit=sum([int(i) for i in str(n)])
+    return digit
+def every(n):
+    for i in range(3):
+      r=n%10
+      n=n//10
+      if not prime(r):
+         return False
+    return True    
+for i in range(100,1000):
+    if prime(i) and prime(sod(i)) and every(i):
+        print(i,end=" ")   
+#pythogorase coprime triplet 
+def cop(i,j):
+    return gcd(i,j)==1
+def gcd(a,b):
+    while(b!=0):
+        rem=a%b
+        a=b
+        b=rem
+    return a    
+a=int(input("Enter any num:"))
+for i in range(5,a):
+    for j in range(4,i):
+        for k in range(3,j):
+            if (j*j + k*k==i*i and cop(i,j) and cop(i,k) and cop(j,k)):
+                print(k,j,i)      
