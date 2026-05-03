@@ -1,0 +1,42 @@
+maths=["Raj","Anu","Kiran","Bala","Pavi"]
+political=["Raj","Bala","Meera","Peter","Ken"]
+social=["Ben","Raj","Meera","Arun","Mohan"]
+m=set(maths)
+p=set(political)
+s=set(social)
+#3subjects
+three=list(m&p&s)
+print(three)
+#2subjects
+a=(m&p)
+b=(p&s)
+c=(s&m)
+two=(a|b|c)-(m&p&s)
+print(list(two))
+#one subject
+
+x=21
+y=5
+z=3
+time=0
+ht=0
+i=1
+while(ht<x):
+    if i%2==1:
+        ht=ht+y
+        time+=1
+    else:
+        ht=ht-z
+        time+=1
+    i+=1
+print(time) 
+#leap year or not
+# 1. divi by 4
+# 2. shuld not divi by 100:
+#     though it is divi by 100,if it is divi by 4
+#     then it is leap year
+n=int(input("Enter year:")) 
+if (n%400==0) or (n%4==0 and n%100!=0):
+    print("Leap year")
+else:
+    print("Not leap year")
