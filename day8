@@ -2,3 +2,40 @@ a=[2,3,4]
 b=a
 b.append(100)
 print(a)
+
+x="AAACCDDDAAD"
+#A3C2D3A2D1
+res=""
+c=1
+for i in range(len(x)):
+    if i+1<len(x) and x[i]==x[i+1]:
+        c+=1
+    else:
+        res=res+x[i]
+        res=res+str(c)
+        c=1
+print(res)
+
+#QR code creation
+import qrcode
+qr=qrcode.QRCode()
+a="TVK is heading towards chennai headquarters"
+qr.add_data(a)
+qr.make(fit=True)
+res=qr.make_image(fill_color="black",back_color=)
+res.save("Sonal.png")
+print("Created sonal")
+
+#OOPS Concept
+class abc:
+    num=100#class variable
+    def set_dim(self,a,b):
+        self.total=a+b+abc.num#instance variable
+    def display(self):
+        print("Addition:",self.total)
+a=abc()
+b=abc()#local variable
+a.set_dim(20,30)
+b.set_dim(50,30)
+a.display()
+b.display()
