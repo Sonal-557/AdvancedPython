@@ -31,11 +31,35 @@ class abc:
     num=100#class variable
     def set_dim(self,a,b):
         self.total=a+b+abc.num#instance variable
+        self.display()
     def display(self):
         print("Addition:",self.total)
 a=abc()
 b=abc()#local variable
 a.set_dim(20,30)
 b.set_dim(50,30)
+# a.display()
+# b.display()
+x="India"
+class ace:
+    def give_details(self,a,b,c,d):#local
+        self.tot=a+b+c#instance
+        self.name=d
+    def display(self):
+        print('1. Name=',self.name)
+        print('2. Marks=',self.tot)
+        print('3. Country=',x)#complete
+class bvrit:
+    def give_details(self,a,b,c,d):#local
+        self.tot=a+b+c#instance
+        self.name=d
+    def display(self):
+        print('1. Name=',self.name)
+        print('2. Marks=',self.tot)
+        print('3. Country=',x)#complete       
+a=ace()
+a.give_details(20,30,40,"Sonal")
 a.display()
+b=bvrit()
+b.give_details(30,40,40,"Sonam")
 b.display()
