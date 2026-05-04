@@ -15,6 +15,46 @@ for i in range(len(x)):
         res=res+str(c)
         c=1
 print(res)
+# Recuresion:
+#     fns calling itself 
+#     base cond -> exit of fns
+#     arg:should be diff
+#     backtracking
+#     nested recursion (more than 1 recursive call)
+#     top down approach 
+def fact(m):
+    if m<=0:
+        return 1
+    else:
+        return m*fact(m-1)
+print(fact(6))
+#backtracking
+def flower(a):
+    if a==4:
+        return 
+    print(a+10,end=" ")
+    flower(a+1) 
+    print(a,end="
+#code snippet
+def raju(a):
+    if a==1:
+        return 
+    a-=1
+    raju(a)
+    print("hai")
+    raju(a)
+raju(2)")
+flower(1)
+#codesnippet
+
+def raju(a):
+    if a==5:
+        return 1
+    b=raju(a+1)
+    print("hai")
+    return b+2
+res=raju(1)
+print(res)
 
 #QR code creation
 import qrcode
@@ -22,9 +62,9 @@ qr=qrcode.QRCode()
 a="TVK is heading towards chennai headquarters"
 qr.add_data(a)
 qr.make(fit=True)
-res=qr.make_image(fill_color="black",back_color=)
+res=qr.make_image(fill_color="black",back_color="white")
 res.save("Sonal.png")
-print("Created sonal")
+print("Created")
 
 #OOPS Concept
 class abc:
