@@ -25,4 +25,20 @@ print(a1)
 print(a2)
 print(11<<2)
 
+#infinite arguments we can give using *args
+print(11<<2)
+def abc(*args):
+    sum=0
+    for i in args:
+        sum+=i
+    print(sum)    
+abc(20,30)
+abc(56,6,6,6)
+#default arguments
+def ace(name='Khushi'):
+    print(name)
+ace("Sonal")
+ace("Sonam")
+ace() 
+
  
