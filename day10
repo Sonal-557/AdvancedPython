@@ -70,5 +70,12 @@ for i in range(len(word)):
         print(chr(ord(word[j]) + 1), end='')
     print() 
 print(sum([2,4,5]))   
-    
+
+#language translator
+from googletrans import Translater
+t=Translator()
+a=input("Enter any word:")
+b=input("Enter target language:")
+res=t.translate(a,dest=b)
+print(res.text)
 
