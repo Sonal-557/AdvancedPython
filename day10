@@ -1,28 +1,3 @@
-#1.
-def ace(x):
-    return len(x)+1
-def boys(a):
-    return "We are smart"
-def girls(y):
-    print(sum(y)*"No")
-for i in range(ace('ace')):
-    print(boys(10))
-girls([1,2,3])
-#2
-list_numbers=[1,2,2,3,4,4,4,5,6]
-u=set(list(list_numbers))
-for num in u:
-    if num%2==0:
-        list_numbers.remove(num)
-print("List:",list_numbers)
-#3
-word='HKNUDT'
-for i in range(len(word)):
-    for j in range(i+1):
-        print(chr(ord(word[j]) + 1), end='')
-    print() 
-print(sum([2,4,5]))   
-    
 print(2*4/2+7-3*2)
 def abc(x):
     return len(x)+2
