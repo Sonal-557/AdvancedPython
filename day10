@@ -41,4 +41,9 @@ ace("Sonal")
 ace("Sonam")
 ace() 
 
+#keyword argument
+def a(**kwargs):
+    print(kwargs)
+a(Name='HII',Score=40)
+
  
