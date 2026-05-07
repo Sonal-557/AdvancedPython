@@ -40,3 +40,11 @@ res=tabulate(data,headers=title,tablefmt="pretty")
 with open("Sonal.txt",'w') as file:
     file.write(res)
 print("Done")    
+
+#fetching data from file
+a=open("Sonal.txt",'r')
+c=a.readlines()
+while c:
+    print(c)
+    c=a.readlines()
+a.close()   
