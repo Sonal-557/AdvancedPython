@@ -1,0 +1,16 @@
+import numpy as np
+a=[10,20,30,40,50]
+res=np.percentile(a,50)
+print(res)
+from scipy import stats
+a=[10,20,30,40,50,60]
+res=stats.percentileofscore(a,11)
+print(res)
+from tabulate import tabulate
+title=["Name","Age","Dept"]
+data=[["Raj",19,"CSE"],
+      ["Sonal",20,"CSE"],
+      ["Meera",45,"AIML"],
+      ["Anil",34,"MECH"]]
+res=tabulate(data,headers=title,tablefmt="pretty")
+print(res)
